@@ -1,9 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Bruno+Ace&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Iceland&family=Karla:ital,wght@0,200..800;1,200..800&family=Zen+Tokyo+Zoo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Bruno+Ace&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Iceland&family=Karla:ital,wght@0,200..800;1,200..800&family=Zen+Tokyo+Zoo&display=swap');
 
-body{
-    background: linear-gradient(
-        rgb(2, 2, 51) 10%,
-        black 100%
-    );
+body {
+    background: linear-gradient(rgb(2, 2, 51) 10%,
+            black 100%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(2, 2, 51);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0 2rem;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fcfafa;
+    font-size: 2rem;
+    margin: 0px;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.nav-link:hover {
+    color: #1a1a1a;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-login {
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.btn-login:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1a1a1a;
+}
+
+.btn-signup {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.btn-signup:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+/* Original Content Styles */
+.section1 {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.heading h1 {
+    font-size: 17rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, #e0e0e0 0%,
+     #2d2c2c 50%,
+     #1a1a1a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.icon-placeholder {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 0.5rem;
+    }
+
+    .btn-login,
+    .btn-signup {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
 }

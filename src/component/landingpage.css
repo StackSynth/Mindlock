@@ -123,8 +123,8 @@ body {
     font-size: 17rem;
     font-weight: 400;
     background: linear-gradient(135deg, #e0e0e0 0%,
-     #2d2c2c 50%,
-     #1a1a1a 100%);
+            #2d2c2c 50%,
+            #1a1a1a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -140,6 +140,35 @@ body {
 .icon-placeholder {
     font-size: 3rem;
     opacity: 0.8;
+}
+
+.description {
+    max-width: 700px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    margin-left: 750px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.description p {
+    font-size: 15px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e0e0e0 0%,
+            #787777 50%,
+            #666565 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 300;
+    font-family: 'Audiowide', sans-serif;
+    opacity: 0.9;
+}
+
+/* Section 2 - Empty */
+.section2 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(2, 2, 51, 0.3), rgba(0, 0, 0, 0.8));
 }
 
 /* Responsive Design */
@@ -161,5 +190,25 @@ body {
     .btn-signup {
         padding: 0.4rem 0.8rem;
         font-size: 0.85rem;
+    }
+
+    .description {
+        margin-left: 1rem;
+        padding: 0 1rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        margin-left: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .description p {
+        font-size: 0.9rem;
     }
 }

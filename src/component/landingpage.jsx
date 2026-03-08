@@ -33,6 +33,18 @@ function LandingPage() {
             Encripted
           </h1>
         </div>
+        <div className="description">
+          <p>
+            MindLockAI is a secure AI-powered personal data vault that helps users store sensitive information safely.
+            It uses client-side encryption with the Web Crypto API, ensuring that data is encrypted before being stored
+            in the database. The platform combines strong security, AI assistance, and modern cloud storage to protect
+            private notes, ideas, and files. With MindLockAI, users maintain full control over their data and privacy.
+          </p>
+        </div>
+      </div>
+
+      {/* Section 2 - Empty */}
+      <div className="section2">
       </div>
     </>
   )

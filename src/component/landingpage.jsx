@@ -5,7 +5,6 @@ import { Search, Bell, User } from "lucide-react";
 function LandingPage() {
   return (
     <>
-      {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo">
@@ -26,7 +25,6 @@ function LandingPage() {
         </div>
       </nav>
 
-      {/* Original Content with Heading */}
       <div className="section1">
         <div className="heading">
           <h1>
@@ -43,7 +41,6 @@ function LandingPage() {
         </div>
       </div>
 
-      {/* Section 2 - Empty */}
       <div className="section2">
       </div>
     </>

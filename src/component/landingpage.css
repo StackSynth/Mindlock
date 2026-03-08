@@ -167,7 +167,6 @@ body {
 
 /* Section 2 - Empty */
 .section2 {
-    min-height: 100vh;
     background: linear-gradient(180deg, rgba(2, 2, 51, 0.3), rgba(0, 0, 0, 0.8));
 }
 

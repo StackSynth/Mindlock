@@ -3,7 +3,7 @@ import './landingpage.css';
 import { Search, Bell, User } from "lucide-react";
 import { motion } from 'framer-motion';
 
-function LandingPage({ onSignInClick }) {
+function LandingPage({ onSignInClick, onNavigate }) {
   return (
     <>
       {/* Neural Network Background */}
@@ -115,10 +115,10 @@ function LandingPage({ onSignInClick }) {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a href="#home" className="nav-link">Home</a>
-            <a href="#features" className="nav-link">Features</a>
-            <a href="#about" className="nav-link">About</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <button className="nav-link" onClick={() => onNavigate('home')}>Home</button>
+            <button className="nav-link" onClick={() => onNavigate('feature')}>Features</button>
+            <button className="nav-link" onClick={() => onNavigate('about')}>About</button>
+            <button className="nav-link" onClick={() => onNavigate('contact')}>Contact</button>
           </motion.div>
 
           <motion.div

@@ -6,7 +6,93 @@ import { motion } from 'framer-motion';
 function LandingPage({ onSignInClick }) {
   return (
     <>
-      {/* Navbar */}
+      {/* Neural Network Background */}
+      <div className="neural-background">
+        <div className="network-container">
+          {/* Network Nodes */}
+          {[...Array(25)].map((_, i) => (
+            <motion.div
+              key={`node-${i}`}
+              className="network-node"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{
+                scale: [0, 1, 1, 0],
+                opacity: [0, 1, 1, 0]
+              }}
+              transition={{
+                duration: 8 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+                ease: "easeInOut"
+              }}
+              style={{
+                left: `${10 + Math.random() * 80}%`,
+                top: `${10 + Math.random() * 80}%`,
+              }}
+            />
+          ))}
+
+          {/* Connection Lines */}
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={`line-${i}`}
+              className="connection-line"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{
+                pathLength: [0, 1, 1, 0],
+                opacity: [0, 0.6, 0.6, 0]
+              }}
+              transition={{
+                duration: 6 + Math.random() * 3,
+                repeat: Infinity,
+                delay: Math.random() * 4,
+                ease: "easeInOut"
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                width: `${50 + Math.random() * 150}px`,
+                transform: `rotate(${Math.random() * 360}deg)`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Floating Particles */}
+        <div className="particles-container">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={`particle-${i}`}
+              className="network-particle"
+              initial={{
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                opacity: 0
+              }}
+              animate={{
+                x: [
+                  Math.random() * window.innerWidth,
+                  Math.random() * window.innerWidth,
+                  Math.random() * window.innerWidth
+                ],
+                y: [
+                  Math.random() * window.innerHeight,
+                  Math.random() * window.innerHeight,
+                  Math.random() * window.innerHeight
+                ],
+                opacity: [0, 0.8, 0.8, 0]
+              }}
+              transition={{
+                duration: 10 + Math.random() * 5,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "linear"
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
       <motion.nav
         className="navbar"
         initial={{ y: -100 }}

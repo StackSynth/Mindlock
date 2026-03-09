@@ -70,11 +70,9 @@ function LandingPage({ onSignInClick }) {
           transition={{ duration: 0.8, delay: 1.5 }}
         >
           <p>
-            MindLockAI is a secure AI-powered personal data vault that helps users store sensitive information safely.
-            It uses client-side encryption with the Web Crypto API, ensuring that data is encrypted before being stored
-            in the database. The platform combines strong security, AI assistance, and modern cloud storage to protect
-            private notes, ideas, and files. With MindLockAI, users maintain full control over their data and privacy.
+            MindLockAI is a secure AI-powered personal data vault that lets users store sensitive information safely. It uses client-side encryption with the Web Crypto API, ensuring data is encrypted before being stored. This gives users full control over their privacy and personal data.
           </p>
+          <button className="get-started-btn">Get Started</button>
         </motion.div>
       </div>
 

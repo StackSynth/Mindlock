@@ -9,7 +9,6 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 
-/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -121,7 +120,7 @@ body {
 
 .heading h1 {
     font-size: 17rem;
-    font-weight: 400;
+    font-weight: 600;
     background: linear-gradient(135deg, #e0e0e0 0%,
             #2d2c2c 50%,
             #1a1a1a 100%);
@@ -163,6 +162,28 @@ body {
     font-weight: 300;
     font-family: 'Audiowide', sans-serif;
     opacity: 0.9;
+}
+
+.get-started-btn {
+  margin-top: 10px;
+  font-size: 10px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-2px);
+}
+
+.get-started-btn:active {
+  transform: translateY(0px);
 }
 
 /* Section 2 - Empty */

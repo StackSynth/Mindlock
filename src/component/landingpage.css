@@ -141,7 +141,7 @@ body {
 .description {
     max-width: 700px;
     padding: 0 0.5rem;
-    margin-top: 1rem;
+    margin-top: -20px;
     margin-left: 750px;
     display: flex;
     align-items: flex-start;
@@ -161,29 +161,35 @@ body {
     opacity: 0.9;
 }
 
+.get-started-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+    width: 100%;
+    padding-right: 50px;
+}
+
 .get-started-btn {
-  margin-top: 10px;
-  font-size: 10px;
-  padding: 10px 10px;
-  font-size: 16px;
-  font-family: "Audiowide", sans-serif;
-  color: white;
-  background-color: #1a1a1a;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+    margin-left: 10px;
+    font-size: 10px;
+    padding: 10px 20px;
+    font-family: "Audiowide", sans-serif;
+    color: white;
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .get-started-btn:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .get-started-btn:active {
-  transform: translateY(0px);
+    transform: translateY(0px);
 }
 
-/* Section 2 - Empty */
 .section2 {
     background: linear-gradient(180deg, rgba(2, 2, 51, 0.3), rgba(0, 0, 0, 0.8));
 }

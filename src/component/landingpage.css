@@ -205,8 +205,8 @@ body {
 }
 
 .description {
-    max-width: 700px;
-    padding: 0 0.5rem;
+    max-width: 900px;
+    padding: 0 1rem;
     margin-top: -20px;
     margin-left: 750px;
     display: flex;

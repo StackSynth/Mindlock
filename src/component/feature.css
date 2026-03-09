@@ -147,10 +147,11 @@ body {
     text-align: center;
     max-width: 800px;
     padding: 2rem;
+    margin-bottom: 750px;
 }
 
 .feature-title {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
     background: linear-gradient(135deg, #faf9f9 0%, #5d5d5d 50%, #515050 100%);
     -webkit-background-clip: text;
@@ -178,6 +179,10 @@ body {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     font-family: "Audiowide", sans-serif;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
 }
 
 .back-btn:hover {

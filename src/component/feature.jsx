@@ -1,4 +1,3 @@
-import React from 'react';
 import './feature.css';
 import { motion } from 'framer-motion';
 
@@ -135,10 +134,8 @@ function Feature({ onNavigate }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
                 >
-                    <h1 className="feature-title">Features</h1>
-                    <p className="feature-description">
-                        Discover the powerful features that make MindLock AI the most secure data vault.
-                    </p>
+                    <h1 className="feature-title">Powerful Features to Protect Your Data</h1>
+                    
                     <button className="back-btn" onClick={() => onNavigate('landing')}>
                         Back to Landing
                     </button>

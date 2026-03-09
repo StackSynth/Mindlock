@@ -228,11 +228,10 @@ body {
     justify-content: flex-end;
     margin-top: 150px;
     width: 100%;
-    padding-right: 50px;
 }
 
 .get-started-btn {
-    margin-left: 100px;
+    margin-left: 200px;
     font-size: 10px;
     padding: 10px 20px;
     font-family: "Audiowide", sans-serif;
@@ -254,6 +253,16 @@ body {
 
 .section2 {
     background: linear-gradient(180deg, rgba(2, 2, 51, 0.3), rgba(0, 0, 0, 0.8));
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.section3 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(2, 2, 51, 0.3));
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Responsive Design */

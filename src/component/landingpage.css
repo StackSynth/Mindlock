@@ -17,12 +17,12 @@ body {
     background: rgb(2, 2, 51);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1500px;
+    padding-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,11 +30,10 @@ body {
 }
 
 .navbar-logo h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #fcfafa;
-    font-size: 2rem;
-    margin: 0px;
+    margin: 10px;
     font-family: 'Audiowide', sans-serif;
 }
 
@@ -47,7 +46,7 @@ body {
 .nav-link {
     color: #666666;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
     font-family: 'Chakra Petch', sans-serif;
@@ -70,7 +69,7 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     font-family: 'Chakra Petch', sans-serif;
@@ -82,7 +81,6 @@ body {
 }
 
 .btn-signup {
-    background: #1a1a1a;
     color: white;
     border: none;
     font-size: 0.9rem;
@@ -99,7 +97,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Original Content Styles */
 .section1 {
     padding-top: 100px;
     display: flex;
@@ -121,9 +118,9 @@ body {
 .heading h1 {
     font-size: 17rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #e0e0e0 0%,
-            #2d2c2c 50%,
-            #1a1a1a 100%);
+    background: linear-gradient(135deg, #faf9f9 0%,
+            #5d5d5d 50%,
+            #515050 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

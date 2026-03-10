@@ -140,23 +140,98 @@ function About({ onNavigate }) {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <h1 className="about-title">About MindLock AI</h1>
-                    <p className="about-description">
-                        MindLockAI is a revolutionary secure AI-powered personal data vault that combines cutting-edge encryption with intelligent assistance. Our mission is to provide users with complete control over their digital privacy while leveraging the power of artificial intelligence.
-                    </p>
-                    <div className="about-features">
-                        <div className="feature-item">
-                            <h3>Client-Side Encryption</h3>
-                            <p>Your data is encrypted before it ever leaves your device</p>
-                        </div>
-                        <div className="feature-item">
-                            <h3>AI-Powered Organization</h3>
-                            <p>Smart categorization and search capabilities</p>
-                        </div>
-                        <div className="feature-item">
-                            <h3>Zero-Knowledge Architecture</h3>
-                            <p>We can't access your data, even if we wanted to</p>
-                        </div>
+
+                    <div className="about-section">
+                        <h2 className="section-title">1. About MindLockAI</h2>
+                        <p className="section-description">
+                            MindLockAI is a secure AI-powered personal data vault designed to protect sensitive information. The platform allows users to store private notes, ideas, and important data in a safe digital environment. MindLockAI uses modern encryption technology to ensure that all user data remains protected and private.
+                        </p>
+                        <p className="section-description">
+                            The system uses client-side encryption with the Web Crypto API, which means that user data is encrypted directly in the browser before it is stored in the database. This approach ensures that only the user can access and decrypt their stored information.
+                        </p>
                     </div>
+
+                    <div className="about-section">
+                        <h2 className="section-title">2. Our Mission</h2>
+                        <p className="section-description">
+                            The mission of MindLockAI is to create a secure and intelligent platform where users can safely store their personal data without worrying about privacy risks. In today's digital world, protecting personal information is extremely important, and MindLockAI aims to provide a simple and reliable solution for that problem.
+                        </p>
+                        <p className="section-description">
+                            By combining modern encryption technology and AI-powered assistance, MindLockAI helps users manage and organize their information while maintaining full control over their privacy.
+                        </p>
+                    </div>
+
+                    <div className="about-section">
+                        <h2 className="section-title">3. Why MindLockAI is Different</h2>
+                        <p className="section-description">
+                            MindLockAI focuses on security, privacy, and intelligent data management. The platform is designed to ensure that user information remains protected while still being easy to access and manage.
+                        </p>
+                        <div className="key-features">
+                            <div className="feature-item">
+                                <h3>Client-Side Encryption</h3>
+                                <p>Data is encrypted in the user's browser before being stored.</p>
+                            </div>
+                            <div className="feature-item">
+                                <h3>AI-Powered Assistance</h3>
+                                <p>AI helps users organize and retrieve their stored information.</p>
+                            </div>
+                            <div className="feature-item">
+                                <h3>Privacy-First Design</h3>
+                                <p>Users maintain full control over their encrypted data.</p>
+                            </div>
+                            <div className="feature-item">
+                                <h3>Secure Cloud Storage</h3>
+                                <p>Encrypted data is stored safely using modern cloud infrastructure.</p>
+                            </div>
+                        </div>
+                        <p className="section-description">
+                            These features ensure that users can trust the platform to keep their sensitive information secure.
+                        </p>
+                    </div>
+
+                    <div className="about-section">
+                        <h2 className="section-title">4. How MindLockAI Works</h2>
+                        <p className="section-description">
+                            MindLockAI follows a simple three-step process to ensure data security.
+                        </p>
+                        <div className="process-steps">
+                            <div className="step-item">
+                                <div className="step-number">1</div>
+                                <div className="step-content">
+                                    <h3>Encrypt</h3>
+                                    <p>User data is encrypted directly in the browser using the Web Crypto API before it is sent to the server.</p>
+                                </div>
+                            </div>
+                            <div className="step-item">
+                                <div className="step-number">2</div>
+                                <div className="step-content">
+                                    <h3>Store</h3>
+                                    <p>The encrypted data is then stored securely in the cloud database.</p>
+                                </div>
+                            </div>
+                            <div className="step-item">
+                                <div className="step-number">3</div>
+                                <div className="step-content">
+                                    <h3>Access</h3>
+                                    <p>When the user logs in, the encrypted data can be safely decrypted and accessed only by the user.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="section-description">
+                            This process ensures that sensitive information is always protected.
+                        </p>
+                    </div>
+
+                    <div className="about-section">
+                        <h2 className="section-title">5. Future Vision</h2>
+                        <p className="section-description">
+                            In the future, MindLockAI aims to expand its capabilities by introducing more advanced features. Planned improvements include enhanced AI tools, encrypted file storage, smart search functionality, and additional security layers.
+                        </p>
+                        <p className="section-description">
+                            The goal is to continuously improve the platform and provide users with a smarter and safer way to store and manage their personal information.
+                        </p>
+                    </div>
+
                     <button className="back-btn" onClick={() => onNavigate('landing')}>
                         Back to Landing
                     </button>

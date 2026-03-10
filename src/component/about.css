@@ -188,6 +188,82 @@ body {
     margin: 0 0 3rem 0;
 }
 
+.about-section {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #00ffff;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.key-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.step-number {
+    background: linear-gradient(135deg, #00ffff, #0088cc);
+    color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Audiowide', sans-serif;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    color: #00ffff;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.step-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    line-height: 1.6;
+}
+
 .feature-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -262,6 +338,25 @@ body {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    .key-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -279,5 +374,23 @@ body {
 
     .feature-item {
         padding: 1rem;
+    }
+
+    .step-item {
+        padding: 1rem;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
     }
 }

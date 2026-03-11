@@ -134,11 +134,10 @@ function Feature({ onNavigate }) {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     <h1 className="feature-title">Powerful Features to Protect Your Data</h1>
-                    
-                    <button className="back-btn" onClick={() => onNavigate('landing')}>
-                        Back to Landing
-                    </button>
                 </motion.div>
+                <button className="back-btn" onClick={() => onNavigate('landing')}>
+                    Back to Landing
+                </button>
             </div>
         </>
     )

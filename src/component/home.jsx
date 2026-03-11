@@ -143,10 +143,10 @@ function Home({ onNavigate }) {
                     <p className="home-description">
                         This is the home page with neural network animation background.
                     </p>
-                    <button className="back-btn" onClick={() => onNavigate('landing')}>
-                        Back to Landing
-                    </button>
                 </motion.div>
+                <button className="back-btn" onClick={() => onNavigate('landing')}>
+                    Back to Landing
+                </button>
             </div>
         </>
     )

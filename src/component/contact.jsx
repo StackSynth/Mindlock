@@ -139,10 +139,10 @@ function Contact({ onNavigate }) {
                     <p className="contact-description">
                         Get in touch with the MindLock AI team for support, partnerships, or inquiries.
                     </p>
-                    <button className="back-btn" onClick={() => onNavigate('landing')}>
-                        Back to Landing
-                    </button>
                 </motion.div>
+                <button className="back-btn" onClick={() => onNavigate('landing')}>
+                    Back to Landing
+                </button>
             </div>
         </>
     )

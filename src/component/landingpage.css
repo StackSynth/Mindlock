@@ -10,7 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Neural Network Background */
 .neural-background {
     position: fixed;
     top: 0;
@@ -117,7 +116,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 .navbar-actions {

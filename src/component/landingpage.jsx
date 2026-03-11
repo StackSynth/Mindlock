@@ -127,8 +127,8 @@ function LandingPage({ onSignInClick, onNavigate }) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <button className="btn-login" onClick={onSignInClick}>Log in</button>
-            <button className="btn-signup">Sign up</button>
+            <button className="btn-login" onClick={() => onNavigate('signup')}>Log in</button>
+            <button className="btn-signup" onClick={() => onNavigate('signup')}>Sign up</button>
           </motion.div>
         </div>
       </motion.nav>
@@ -159,7 +159,7 @@ function LandingPage({ onSignInClick, onNavigate }) {
             MindLockAI is a secure AI-powered personal data vault that lets users store sensitive information safely. It uses client-side encryption with the Web Crypto API, ensuring data is encrypted before being stored. This gives users full control over their privacy and personal data.
           </p>
           <div className="get-started-container">
-            <button className="get-started-btn">Get Started</button>
+            <button className="get-started-btn" onClick={() => onNavigate('signup')}>Get Started</button>
           </div>
         </motion.div>
       </div>

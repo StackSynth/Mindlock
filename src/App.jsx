@@ -5,6 +5,7 @@ import Home from './component/home'
 import About from './component/about'
 import Contact from './component/contact'
 import Feature from './component/feature'
+import Signup from './component/signup'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing')
@@ -25,6 +26,8 @@ function App() {
         return <Contact onNavigate={handleNavigation} />
       case 'feature':
         return <Feature onNavigate={handleNavigation} />
+      case 'signup':
+        return <Signup onNavigate={handleNavigation} />
       default:
         return <LandingPage onNavigate={handleNavigation} />
     }

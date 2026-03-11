@@ -210,6 +210,7 @@ body {
     margin-top: -20px;
     margin-left: 750px;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 
@@ -229,30 +230,64 @@ body {
 
 .get-started-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 150px;
+    justify-content: flex-start;
+    margin-top: 30px;
     width: 100%;
 }
 
 .get-started-btn {
-    margin-left: 200px;
-    font-size: 10px;
-    padding: 10px 20px;
+    font-size: 12px;
+    padding: 12px 32px;
     font-family: "Audiowide", sans-serif;
-    color: white;
-    background-color: #1a1a1a;
-    border: none;
-    border-radius: 8px;
+    color: #ffffff;
+    background: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease;
+    animation: btnPulse 3s ease-in-out infinite;
+}
+
+.get-started-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: #ffffff;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.get-started-btn:hover::before {
+    opacity: 1;
 }
 
 .get-started-btn:hover {
-    transform: translateY(-2px);
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .get-started-btn:active {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(0.97);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes btnPulse {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    }
 }
 
 .section2 {

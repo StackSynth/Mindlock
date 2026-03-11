@@ -5,10 +5,8 @@ import { motion } from 'framer-motion';
 function About({ onNavigate }) {
     return (
         <>
-            {/* Neural Network Background */}
             <div className="neural-background">
                 <div className="network-container">
-                    {/* Network Nodes */}
                     {[...Array(25)].map((_, i) => (
                         <motion.div
                             key={`node-${i}`}
@@ -31,7 +29,6 @@ function About({ onNavigate }) {
                         />
                     ))}
 
-                    {/* Connection Lines */}
                     {[...Array(15)].map((_, i) => (
                         <motion.div
                             key={`line-${i}`}
@@ -57,7 +54,6 @@ function About({ onNavigate }) {
                     ))}
                 </div>
 
-                {/* Floating Particles */}
                 <div className="particles-container">
                     {[...Array(20)].map((_, i) => (
                         <motion.div
@@ -92,7 +88,6 @@ function About({ onNavigate }) {
                 </div>
             </div>
 
-            {/* Navbar */}
             <motion.nav
                 className="navbar"
                 initial={{ y: -100 }}
@@ -127,6 +122,7 @@ function About({ onNavigate }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
+                        <button className="btn-login" onClick={() => onNavigate('signup')}>Sign In</button>
                         <button className="btn-login" onClick={() => onNavigate('landing')}>Back</button>
                     </motion.div>
                 </div>

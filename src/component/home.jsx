@@ -127,6 +127,7 @@ function Home({ onNavigate }) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
+                        <button className="btn-login" onClick={() => onNavigate('signup')}>Sign In</button>
                         <button className="btn-login" onClick={() => onNavigate('landing')}>Back</button>
                     </motion.div>
                 </div>

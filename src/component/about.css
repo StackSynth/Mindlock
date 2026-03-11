@@ -152,12 +152,14 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+    margin-left: 250px;
 }
 
 .about-container {
     text-align: center;
     max-width: 900px;
     padding: 2rem;
+    margin: 0 auto;
 }
 
 .about-title {
@@ -190,7 +192,7 @@ body {
 
 .about-section {
     margin-bottom: 3rem;
-    text-align: left;
+    text-align: center;
 }
 
 .section-title {

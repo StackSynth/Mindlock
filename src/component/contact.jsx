@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 function Contact({ onNavigate }) {
     return (
         <>
-            {/* Neural Network Background */}
             <div className="neural-background">
                 <div className="network-container">
                     {[...Array(25)].map((_, i) => (

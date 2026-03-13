@@ -6,10 +6,9 @@ import { motion } from 'framer-motion';
 function LandingPage({ onSignInClick, onNavigate }) {
   return (
     <>
-      {/* Neural Network Background */}
       <div className="neural-background">
         <div className="network-container">
-          {/* Network Nodes */}
+          
           {[...Array(25)].map((_, i) => (
             <motion.div
               key={`node-${i}`}
@@ -32,7 +31,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
             />
           ))}
 
-          {/* Connection Lines */}
           {[...Array(15)].map((_, i) => (
             <motion.div
               key={`line-${i}`}
@@ -58,7 +56,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
           ))}
         </div>
 
-        {/* Floating Particles */}
         <div className="particles-container">
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -165,10 +162,8 @@ function LandingPage({ onSignInClick, onNavigate }) {
       </div>
 
       <div className="section2">
-        {/* Neural Network Background for Section 2 */}
         <div className="neural-background">
           <div className="network-container">
-            {/* Network Nodes */}
             {[...Array(25)].map((_, i) => (
               <motion.div
                 key={`node-sec2-${i}`}
@@ -191,7 +186,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
               />
             ))}
 
-            {/* Connection Lines */}
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={`line-sec2-${i}`}
@@ -217,7 +211,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
             ))}
           </div>
 
-          {/* Floating Particles */}
           <div className="particles-container">
             {[...Array(20)].map((_, i) => (
               <motion.div
@@ -254,10 +247,8 @@ function LandingPage({ onSignInClick, onNavigate }) {
       </div>
 
       <div className="section3">
-        {/* Neural Network Background for Section 3 */}
         <div className="neural-background">
           <div className="network-container">
-            {/* Network Nodes */}
             {[...Array(25)].map((_, i) => (
               <motion.div
                 key={`node-sec3-${i}`}
@@ -280,7 +271,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
               />
             ))}
 
-            {/* Connection Lines */}
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={`line-sec3-${i}`}
@@ -306,7 +296,6 @@ function LandingPage({ onSignInClick, onNavigate }) {
             ))}
           </div>
 
-          {/* Floating Particles */}
           <div className="particles-container">
             {[...Array(20)].map((_, i) => (
               <motion.div

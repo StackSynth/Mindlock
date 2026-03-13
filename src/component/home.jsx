@@ -5,10 +5,8 @@ import { motion } from 'framer-motion';
 function Home({ onNavigate }) {
     return (
         <>
-            {/* Neural Network Background */}
             <div className="neural-background">
                 <div className="network-container">
-                    {/* Network Nodes */}
                     {[...Array(25)].map((_, i) => (
                         <motion.div
                             key={`node-${i}`}
@@ -31,7 +29,6 @@ function Home({ onNavigate }) {
                         />
                     ))}
 
-                    {/* Connection Lines */}
                     {[...Array(15)].map((_, i) => (
                         <motion.div
                             key={`line-${i}`}
@@ -57,7 +54,6 @@ function Home({ onNavigate }) {
                     ))}
                 </div>
 
-                {/* Floating Particles */}
                 <div className="particles-container">
                     {[...Array(20)].map((_, i) => (
                         <motion.div
@@ -92,7 +88,6 @@ function Home({ onNavigate }) {
                 </div>
             </div>
 
-            {/* Navbar */}
             <motion.nav
                 className="navbar"
                 initial={{ y: -100 }}

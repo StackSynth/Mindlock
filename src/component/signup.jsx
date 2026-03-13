@@ -20,7 +20,6 @@ function Signup({ onNavigate }) {
 
         try {
             if (isSignIn) {
-                // Sign in logic
                 const { data, error } = await supabase.auth.signInWithPassword({
                     email,
                     password,
@@ -30,7 +29,6 @@ function Signup({ onNavigate }) {
                 setMessage('Sign in successful! Redirecting...');
                 setTimeout(() => onNavigate('home'), 1500);
             } else {
-                // Sign up logic
                 if (password !== confirmPassword) {
                     setError('Passwords do not match');
                     setLoading(false);
@@ -64,7 +62,6 @@ function Signup({ onNavigate }) {
 
     return (
         <>
-            {/* Neural Network Background */}
             <div className="neural-background">
                 <div className="network-container">
                     {[...Array(25)].map((_, i) => (
@@ -148,7 +145,6 @@ function Signup({ onNavigate }) {
                 </div>
             </div>
 
-            {/* Navbar */}
             <motion.nav
                 className="navbar"
                 initial={{ y: -100 }}
@@ -175,8 +171,6 @@ function Signup({ onNavigate }) {
                     </motion.div>
                 </div>
             </motion.nav>
-
-            {/* Auth Content */}
             <div className="auth-content">
                 <motion.div
                     className="auth-container"

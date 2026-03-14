@@ -4,7 +4,8 @@ import { supabase } from './supabaseclint';
 import { motion } from 'framer-motion';
 
 function Signup({ onNavigate }) {
-    const [isSignIn, setIsSignIn] = useState(true);
+    const [isSignIn, setIsSignIn] = useState(false);
+    const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -44,6 +45,24 @@ function Signup({ onNavigate }) {
                 setMessage('Account created successfully! Please check your email to verify.');
                 setTimeout(() => setIsSignIn(true), 2000);
             }
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleGoogleSignIn = async () => {
+        setLoading(true);
+        setError('');
+        try {
+            const { data, error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: {
+                    redirectTo: window.location.origin
+                }
+            });
+            if (error) throw error;
         } catch (error) {
             setError(error.message);
         } finally {
@@ -171,88 +190,27 @@ function Signup({ onNavigate }) {
                     </motion.div>
                 </div>
             </motion.nav>
-            <div className="auth-content">
-                <motion.div
-                    className="auth-container"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                >
-                    <h1 className="auth-title">
-                        {isSignIn ? 'Sign In to MindLock AI' : 'Create Account'}
-                    </h1>
-                    <p className="auth-description">
-                        {isSignIn
-                            ? 'Welcome back! Please sign in to your account.'
-                            : 'Join us! Create your account to get started.'
-                        }
-                    </p>
+            
+                    <motion.div
+                        className="auth-header"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.8 }}
+                    >
+                      
+                    </motion.div>
 
-                    <form className="auth-form" onSubmit={handleAuth}>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                                placeholder="Enter your email"
-                            />
-                        </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.8 }}
+                    >
+                       
+                    </motion.div>
+                    <div className="">
 
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                                placeholder="Enter your password"
-                            />
-                        </div>
-
-                        {!isSignIn && (
-                            <div className="form-group">
-                                <label htmlFor="confirmPassword">Confirm Password</label>
-                                <input
-                                    type="password"
-                                    id="confirmPassword"
-                                    value={confirmPassword}
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                    required
-                                    placeholder="Confirm your password"
-                                />
-                            </div>
-                        )}
-
-                        {error && <div className="error-message">{error}</div>}
-                        {message && <div className="success-message">{message}</div>}
-
-                        <button
-                            type="submit"
-                            className="auth-btn"
-                            disabled={loading}
-                        >
-                            {loading ? 'Processing...' : (isSignIn ? 'Sign In' : 'Sign Up')}
-                        </button>
-                    </form>
-
-                    <div className="auth-toggle">
-                        <p>
-                            {isSignIn ? "Don't have an account? " : "Already have an account? "}
-                            <button
-                                type="button"
-                                className="toggle-btn"
-                                onClick={toggleMode}
-                            >
-                                {isSignIn ? 'Sign Up' : 'Sign In'}
-                            </button>
-                        </p>
                     </div>
-                </motion.div>
-            </div>
+             
         </>
     );
 }

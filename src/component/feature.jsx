@@ -26,7 +26,7 @@ function Feature({ onNavigate }) {
                                 top: `${10 + Math.random() * 80}%`,
                             }}
                         />
-                    ))}
+                    ))} 
 
                     {[...Array(15)].map((_, i) => (
                         <motion.div
